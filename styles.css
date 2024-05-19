@@ -1,0 +1,165 @@
+body {
+   height: 100vh;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   background-image: url(https://img.freepik.com/free-photo/photorealistic-earth-planet_23-2151075930.jpg?t=st=1716151857~exp=1716155457~hmac=8dcdce5e7dad5aeafa0e657e25fae9d2c0a96279baf7f7f80fde4e5dfeea3efd&w=740);
+   background-size: 100%;
+   font-family: "Radio-Canada", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   scroll-behavior: smooth;
+}
+
+.table {
+   border-radius: 10px;
+   table-layout: fixed;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   height: 90%;
+   margin: 10px;
+   padding: 0px 10px;
+   overflow: hidden;
+   background-image: url(https://media.istockphoto.com/id/971578384/photo/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-texture.webp?b=1&s=170667a&w=0&k=20&c=fClkTGdzR4UoSJcvOdwyGiXQhsLnDyyGZwlTXfQdxW8=);
+   background-size: cover;
+   box-shadow: 0px 2px 7px 5px rgba(0,0,0,0.75);
+}  
+
+.table-header {
+   background: rgba(255, 255, 255, 0.07);
+   border-radius: 16px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(3px);
+   border: 1px solid rgba(255, 255, 255, 0.23);
+   padding: 5px;
+   border-radius: 10px;
+   margin: 20px;
+   font-size: 14px;
+   text-align: center;
+   color: white;
+   text-shadow: 2px 0 4px rgba(0,0,0,0.25);
+}
+
+
+.table-body {
+   background-color: #a2d6d4;
+   margin: 30px;
+   max-height: 75%;
+   border-radius: 20px;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+
+table, th, tr {
+   text-align: center;
+   padding: 20px;
+   margin-right: 0;
+   border-collapse: collapse;
+   width: 60vw;
+}
+
+thead {
+   background-color: #bed3df;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 999;
+}
+
+
+td img {
+   width: 50px;
+   margin: 10px;
+   vertical-align: middle;
+}
+
+tbody tr{
+   transition: transform 0.5s ease;
+   transform-origin: center;
+}
+
+
+tbody tr:hover {
+   transform: scale(1.02);
+}
+
+tbody tr:nth-child(odd) {
+   background-color: #c3e0df;
+   height: 10px;
+}
+
+tbody tr:nth-child(even) {
+   background-color: #9ad4d2;
+   backface-visibility: hidden;
+}
+
+tbody td:first-child {
+   font-weight: 700;
+   width: 5%;
+   text-overflow: ellipsis;
+}
+
+
+.table-body::-webkit-scrollbar {
+   width: 10px;
+}
+
+.table-body::-webkit-scrollbar-track {
+   background-color: #263e85;
+   border-radius: 15px;
+}
+
+.table-body::-webkit-scrollbar-thumb {
+   background-color: #508583;
+   border-radius: 20px;
+}
+
+.table-body::-webkit-scrollbar-thumb:hover {
+   background-color: #06153a;
+}
+
+@media (max-width: 768px) {
+   .table {
+      height: 100vh;
+   }
+
+   td img {
+      width: 30px;
+   }
+}
+
+@media (max-width: 680px) {
+
+
+   .table-body {
+      overflow-x: auto;
+   }
+
+   .table-header {
+      font-size: 10px;
+   }
+}
+
+@media (max-width: 425px) {
+
+   .table {
+      height: 95%;
+      overflow: auto;
+   }
+   .table-body {
+      margin: 10px;
+      padding: 0;
+      border-radius: 20px;
+   }
+   table {
+      font-size: 14px;
+   }
+
+   tbody td:first-child {
+      margin: 0;
+      padding: 0;
+      width: 1%;
+   }
+}
